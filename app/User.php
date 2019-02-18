@@ -33,3 +33,9 @@ class User extends Authenticatable
         return $this->hasMany(Task::class);
     }
 }
+
+$user = App\User::find(1);
+
+foreach ($user->tasks as $task) {
+    echo $task->name;
+}
